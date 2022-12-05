@@ -1,11 +1,11 @@
 {
-  "name": "easy-peasy-express",
+  "name": "@schrock/easy-peasy-express",
   "version": "1.0.2",
   "description": "Make wiring up routes in express.js less sucky, require less programming, and more configuring! Yay!",
   "main": "easy-peasy-express.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benduran/easy-peasy-express.git"
+    "url": "git+https://github.com/schrock/easy-peasy-express.git"
   },
   "keywords": [
     "easy",
@@ -35,9 +35,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benduran/easy-peasy-express/issues"
+    "url": "https://github.com/schrock/easy-peasy-express/issues"
   },
-  "homepage": "https://github.com/benduran/easy-peasy-express",
+  "homepage": "https://github.com/schrock/easy-peasy-express",
   "devDependencies": {
     "body-parser": "^1.20.0",
     "chai": "^4.3.7",
