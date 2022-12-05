@@ -6,7 +6,7 @@ const
 
 const
     mime = require('mime'),
-    request = require('request'),
+    axios = require('axios'),
     _ = require('lodash');
 
 let
@@ -199,23 +199,26 @@ function bindConfig(server, config, url, allControllers) {
             server.get(url, (req, res) => {
                 if (config.redirectTo) {
                     if (config.keepOldURL) {
-                        // Will request the page manually here via request library
+                        // Will request the page manually here via axios library
                         // and pipe it through as if it were coming from this request instance
-                        request({
-                            uri: req.protocol + '://' + req.hostname + ':' + (additionalArgs.serverPort || 80) + config.redirectTo + objToQueryString(req.query),
-                            method: 'GET',
+                        axios({
+                            url: req.protocol + '://' + req.hostname + ':' + (additionalArgs.serverPort || 80) + config.redirectTo + objToQueryString(req.query),
+                            method: 'get',
                             headers: req.headers
-                        }, (err, response) => {
+                        }).then((response) => {
                             res.set(_.assign(config.headers || {}, {
                                 'Cache-Control': 'no-cache, no-store, must-revalidate',
                                 'Pragma': 'no-cache',
                                 'Expires': 0
                             }));
-                            if (err) {
-                                res.send(err);
-                            } else {
-                                res.send(response.body);
-                            }
+                            res.send(response.data);
+                        }).catch((error) => {
+                            res.set(_.assign(config.headers || {}, {
+                                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                                'Pragma': 'no-cache',
+                                'Expires': 0
+                            }));
+                           res.send(error);
                         });
                     } else {
                         res.redirect(config.redirectTo + objToQueryString(req.query));
