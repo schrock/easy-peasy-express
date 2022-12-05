@@ -1,11 +1,11 @@
-# `easy-peasy-express` is no longer maintained, as many excellent routing alternatives have been released since it was originally created
+# This fork of `easy-peasy-express` updates dependencies for security and maintainability purposes.
 
 # easy-peasy-express
 
-[npm-image]: https://img.shields.io/npm/v/easy-peasy-express.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/easy-peasy-express
-[downloads-image]: https://img.shields.io/npm/dm/easy-peasy-express.svg?style=flat
-[downloads-url]: https://www.npmjs.com/package/easy-peasy-express
+[npm-image]: https://img.shields.io/npm/v/@schrock/easy-peasy-express.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/@schrock/easy-peasy-express
+[downloads-image]: https://img.shields.io/npm/dm/@schrock/easy-peasy-express.svg?style=flat
+[downloads-url]: https://www.npmjs.com/package/@schrock/easy-peasy-express
 
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]

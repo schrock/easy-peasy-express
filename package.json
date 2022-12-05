@@ -1,11 +1,11 @@
 {
-  "name": "easy-peasy-express",
-  "version": "1.0.1",
+  "name": "@schrock/easy-peasy-express",
+  "version": "1.0.2",
   "description": "Make wiring up routes in express.js less sucky, require less programming, and more configuring! Yay!",
   "main": "easy-peasy-express.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benduran/easy-peasy-express.git"
+    "url": "git+https://github.com/schrock/easy-peasy-express.git"
   },
   "keywords": [
     "easy",
@@ -35,22 +35,22 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benduran/easy-peasy-express/issues"
+    "url": "https://github.com/schrock/easy-peasy-express/issues"
   },
-  "homepage": "https://github.com/benduran/easy-peasy-express",
+  "homepage": "https://github.com/schrock/easy-peasy-express",
   "devDependencies": {
-    "body-parser": "^1.15.0",
-    "chai": "^3.5.0",
-    "eslint": "^2.9.0",
-    "eslint-config-google": "^0.5.0",
-    "mocha": "^2.4.5",
-    "supertest": "^1.2.0"
+    "body-parser": "^1.20.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.29.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^10.1.0",
+    "supertest": "^6.3.2"
   },
   "dependencies": {
-    "express": "^4.13.4",
-    "lodash": "^4.13.1",
-    "mime": "^1.3.4",
-    "request": "^2.72.0"
+    "axios": "^1.1.3",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mime": "^3.0.0"
   },
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha --reporter spec test/"
